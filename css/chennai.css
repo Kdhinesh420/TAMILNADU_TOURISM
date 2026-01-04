@@ -10,7 +10,9 @@ body {
   background: #fff7eb;
   color: #333;
   line-height: 1.6;
-
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -40,6 +42,7 @@ header img {
   margin: 20px auto;
   padding: 0 15px;
   text-decoration: none;
+  flex: 1;
 }
 
 .btn-group {
@@ -87,11 +90,23 @@ h2 {
   transform: scale(1.02);
 }
 
+.card a {
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+}
+
 .card img {
   width: 350px;
   height: 250px;
   object-fit: cover;
   border-radius: 10px;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.card img:hover {
+  transform: scale(1.05);
 }
 
 .card-content {
@@ -126,7 +141,8 @@ footer {
   justify-content: space-around;
   flex-wrap: wrap;
   font-size: 0.9rem;
-  margin-top: 30px;
+  margin-top: auto;
+  width: 100%;
 }
 
 footer div {
